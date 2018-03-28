@@ -7,17 +7,22 @@ TLD = [];
 SHD = [];    % Switch Handle Delay
 delSHD = [];  % Delay Jitter
 
+HFS_SHD = [];    % Half Step Forward Switch Handle Delay
+delHFS_SHD = [];  %  Half Step Forward Delay Jitter
 time_step = [];
 
 for i = 1: 100
     time_step(i) = i;
     TLD(i) = exprnd(1/0.45);    %  Table Lookup Delay
     SHD(i) = TLD(i) + WSD + DD + FTD + OD;
+    HFS_SHD(i) = WSD + DD + max(FTD, TLD(i)) + OD;
     if i == 1
         delSHD(i) = 0;
+        delHFS_SHD(i) = 0;
     else
         delSHD(i) = SHD(i) - SHD(i-1);
+        delHFS_SHD(i) = (abs(TLD(i)-FTD) + WSD + DD + OD) - (abs(TLD(i-1)-FTD) + WSD + DD + OD);
     end    
 end
 
-plot(time_step, delSHD);
+plot(time_step, delSHD, time_step, delHFS_SHD);
