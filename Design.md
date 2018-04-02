@@ -6,6 +6,7 @@ Virtual circuit switch is composed of five parts:
 * Dispatcher
 * Fabric
 * Output Buffer Queue
+* * *
 
 The delays of above five steps include five parts:
 * TLD - Table Lookup Delay
@@ -14,28 +15,35 @@ The delays of above five steps include five parts:
 * FTD - Fabric Transfer Delay
 * OD - Output Delay
 
-
+* * *
 ## Switch Handle Delay of traditional virtual circuit network
+
 
 Switch Handle Delay of traditional virtual circuit network is calculated as follows:
 
-``` SHD = TLD + WSD + DD + FTD + OD ```
+__SHD = TLD + WSD + DD + FTD + OD__
 
+* * *
 ## Switch Handle Delay of Half Step Forward Switching Technology (HSFST)
+
 
 Switch Handle Delay of Half Step Forward Switching Technology is calculated as follows:
 
-``` SHD = WSD + DD + max(FTD, TLD) + OD ```
+__SHD = WSD + DD + max(FTD, TLD) + OD__
 
+* * *
 ## Delay Jitter of traditional virtual circuit network
 
 Delay Jitter of traditional virtual circuit network is calculated as follows:
 
-``` &#916;(SHD) = &#916;(TLD + WSD + DD + FTD + OD) ```
+__&#916;(SHD) = &#916;(TLD + WSD + DD + FTD + OD)__
 
+* * *
 ## Delay Jitter of Half Step Forward Switching Technology (HSFST)
 
 Delay Jitter of Half Step Forward Switching Technology (HSFST) is calculated as follows:
 
-``` &#916;(HFS-SHD) = &#916;(|TLD-FTD| + WSD + DD + OD) ```
+__&#916;(HFS-SHD) = &#916;(|TLD-FTD| + WSD + DD + OD)__
 
+
+* * *
