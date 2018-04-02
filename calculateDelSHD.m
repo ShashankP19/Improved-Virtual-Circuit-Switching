@@ -2,5 +2,5 @@
 % switching technology
 
 function delSHD = calculateDelSHD(SHD)
-    delSHD = SHD(1)-SHD(0);
+    delSHD = SHD(2)-SHD(1);
 end
