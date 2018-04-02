@@ -19,11 +19,11 @@ num_iter = 100; % Number of iterations
 for i = 1: num_iter
     time_step(i) = i;
     TLD(i) = getTLD(1/0.45);    %  Table Lookup Delay
-    WSD(i) = getWSD();          %  Wait for Service Delay
-    DD(i) = getDD();            %  Dispatch Delay
-    FTD(i) = getFTD();          %  Fabric Transfer Delay
-    OD(i) = getOD();            %  Output Delay
-    SHD(i) = calculateSHD(TLD(i), WSD(i), );
+    WSD(i) = getWSD();    %  Table Lookup Delay
+    DD(i) = getTLD();    %  Table Lookup Delay
+    FTD(i) = getTLD();    %  Table Lookup Delay
+    TLD(i) = getTLD();    %  Table Lookup Delay
+    SHD(i) = TLD(i) + WSD + DD + FTD + OD;
     HFS_SHD(i) = WSD + DD + max(FTD, TLD(i)) + OD;
     if i == 1
         delSHD(i) = 0;
