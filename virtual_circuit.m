@@ -25,4 +25,6 @@ for i = 1: 100
     end    
 end
 
-plot(time_step, delSHD, time_step, delHFS_SHD);
+
+%plot(time_step, delSHD, time_step, delHFS_SHD);
+plot(time_step, SHD, time_step, HFS_SHD);
