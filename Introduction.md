@@ -48,8 +48,8 @@ HFS-SHD = WSD + DD + Max(TLD,FTD) + OD
 
 ### Figures
 
-##### Simulation results (transmission rate( 12.24Kbps), look-up table delay distribution (exponential (0.45s)))
+##### Simulation results of Switch Handle Delay
 ![Delay](delay.png)
 
-##### Simulation results (transmission rate( 12.24Kbps), look-up table delay jitter distribution (exponential (0.45s)))
+##### Simulation results of Delay Jitter
 ![Delay jitter](delay_jitter.png)
