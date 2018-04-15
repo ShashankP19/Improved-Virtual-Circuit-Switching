@@ -2,7 +2,7 @@
 
 ### Title:
 
-A Improved Virtual Circuit Switching Technology Based on Concurrent Processing Mode
+An Improved Virtual Circuit Switching Technology Based on Concurrent Processing Mode
 
 ### Members:
 * Praveen Kumar Gupta (16CO235)   pvgupta24@gmail.com
@@ -21,19 +21,39 @@ In HSFST, information about next output ports are encapsulated in frames at the 
 
 ### References:
 
-A improved virtual circuit switching technology based on concurrent processing mode : http://ieeexplore.ieee.org/document/6023561/
+A improved virtual circuit switching technology based on concurrent processing mode : 
+
+http://ieeexplore.ieee.org/document/6023561/
 
 ## File Structure
 
-* Introduction.md - Explain theoretical aspects of the mini project.
-* Design.md - Explain design aspects of the mini project.
-* main.m - Main module
-* getTLD.m - Module to find the Table Lookup Delay(TLD)
-* getWSD.m - Module to find the Wait for Service Delay(WSD)
-* getDD.m - Module to find the Dispatch Delay(DD)
-* getFTD.m - Module to find the Fabric Transfer Delay(FTD)
-* getOD.m - Module to find the Output Delay(OD)
-* calculateSHD.m - Module to calculate Switch Handle Delay (SHD)
-* calculateHFS_SHD.m - Module to calculate Switch Handle Delay of Half Step Forward Switching Technology (HSFST)
-* calculateDelSHD.m - Module to calculate Delay Jitter of traditional virtual circuit switching technology
-* calculateDelHFS_SHD.m - Module to calculate Delay Jitter of Half Step Forward Switching Technology (HSFST)
+| Modules        	    | Description 
+| ------------- 	    |------------- 
+| Introduction.md	    | Explains theoretical aspects of the mini project 
+| Design.md      	    | Explains design aspects of the mini project  
+| main.m  			    | Main module     
+| getTLD.m              | Module to find the Table Lookup Delay(TLD)
+| getWSD.m              | Module to find the Wait for Service Delay(WSD)
+| getDD.m               | Module to find the Dispatch Delay(DD)
+| getFTD.m              | Module to find the Fabric Transfer Delay(FTD)
+| getOD.m               | Module to find the Output Delay(OD)
+| calculateSHD.m        | Module to calculate Switch Handle Delay (SHD)
+| calculateHFS_SHD.m    | Module to calculate Switch Handle Delay of Half Step Forward Switching Technology (HSFST)
+| calculateDelSHD.m     | Module to calculate Delay Jitter of traditional virtual circuit switching technology
+| calculateDelHFS_SHD.m | Module to calculate Delay Jitter of Half Step Forward Switching Technology (HSFST)
+
+#### Expected Results
+
+##### Expected Simulation results (transmission rate( 12.24Kbps), look-up table delay distribution (exponential (0.45s)))
+![Delay](delay.png)
+
+##### Expected Simulation results (transmission rate( 12.24Kbps), look-up table delay jitter distribution (exponential (0.45s)))
+![Delay jitter](delay_jitter.png)
+
+### Simulation Results
+
+##### Simulation results (transmission rate( 12.24Kbps), look-up table delay distribution (exponential (0.45s)))
+![Delay](SHD.png)
+
+##### Simulation results (transmission rate( 12.24Kbps), look-up table delay jitter distribution (exponential (0.45s)))
+![Delay jitter](DelayJitter.png)
