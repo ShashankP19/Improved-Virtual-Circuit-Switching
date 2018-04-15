@@ -46,7 +46,21 @@ for i = 1: num_iter
 end
 
 % Plot Switch Handle Delays 
-plot(time_step, delSHD, time_step, delHFS_SHD);
+shd_plot = plot(time_step, SHD, 'b', time_step, HFS_SHD, 'g')
+legend('switching process delay of traditional switching technology', 'switching process delay of HSF switching technology')
+title(['Switch Handle Delay'])
+xlabel('Time')
+ylabel('Switch Handle Delay')
+saveas(gcf,'SHD.png')
 
 % Plot Delay Jitters
-plot(time_step, SHD, time_step, HFS_SHD);
+C = [delSHD;delHFS_SHD];
+C = C.';
+dj_plot = area(time_step, C)
+set(dj_plot(1), 'FaceColor', 'g')
+set(dj_plot(2), 'FaceColor','b')
+legend('delay jitter of HSF switching technology', 'delay jitter of traditional switching technology')
+title(['Delay Jitter'])
+xlabel('Time')
+ylabel('Delay jitter')
+saveas(gcf,'DelayJitter.png')
