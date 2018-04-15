@@ -39,6 +39,12 @@ SHD = TLD + WSD + DD + FTD +OD
 
 Through optimizing the switching procession, a improved virtual circuit switching technology based on concurrent processing mode called Half Step Forward Switching Technology (HSFST) is presented in this paper. The experimental results show that this technique diminishes the switching delay and smoothens the delay jitter. 
 
+The total Switch Handle Delay(marked SHD) and the delay jitter (marked &#916;(SHD)) using the  Half Step Forward Switching Technology (HSFST) can be calculated as follows.
+
+HFS-SHD = WSD + DD + Max(TLD,FTD) + OD
+
+&#916;(HFS-SHD) = &#916;(|TLD-FTD|+WSD+DD+OD)
+
 
 ### Figures
 
